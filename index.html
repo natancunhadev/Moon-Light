@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <title>Moon Light</title>
+    <!-- mandar sinal da fonte pro css, signal router
+    of css -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+      <!-- favicon ... -->
+    <link rel="icon" type="image/png" href="assets/home/favicon.png">
+ 
+      
+</head>
+
+
+<body>
+    
+    
+    <header>
+        <a href="#" class="logo">Moon light</a>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    
+    <section>
+        <img src="assets/home/stars.png" id="stars">
+        <img src="assets/home/moon.png" id="moon">
+        <img src="assets/home/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#" id="btn">MATCH</a>
+        <img src="assets/home/mountains_front.png" id="mountains_front">
+    </section> 
+   
+   
+    <div class="sec" id="sec">
+        <h2>Moon light</h2>
+        <p>Welcome to Moon Light, this is a re-code of the web moon ligth with new concepts and programming by Software Developer Natan de Souza Cunha.
+            all rights reserveds.2023 </p>
+   </div>
+    
+<script>
+
+    
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+;
+
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    text.style.marginRight = value * 4 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+    header.style.top = value * 0.5 + 'px';
+
+})
+
+
+</script>
+
+
+</body>
+</html>
